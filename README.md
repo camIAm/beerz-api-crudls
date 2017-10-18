@@ -88,8 +88,96 @@ $ npm install
 
   ```
   {
-      "ok": true,
-      "id": "beer_vary_hazy",
-      "rev": "1-ac8145baf2bdac1cbcb2377e208a9170"
-  }
+    "ok": true,
+    "id": "beer_vary_hazy",
+    "rev": "3-57780a04be5c2b4a4f043b1b3cce8bee"
+}
   ```
+
+  ## Get a beer - `GET /beers/{id}`
+
+Retrieves a single painting object by the painting `{id}` route parameter.  
+
+**Example**
+
+```
+GET /beers/beer_vary_hazy
+```
+
+**Response 200**
+
+```
+{
+  "_id": "beer_vary_hazy",
+  "name": "Vary Hazy",
+  "type": "Imperial IPA",
+  "brewer": "Tree House Brewing Company",
+  "ABV": "8.60",
+  "score": 4.73,
+  "ratings": 671
+}
+```
+
+### Route Parameters
+
+  - `id` - used to identify a beer in the collection of beers.
+
+## Update a beer - `PUT /beers/{id}`
+
+Updates a single beer using the beer `{id}` route parameter.
+
+**Example**
+
+```
+PUT /beers/beer_vary_hazy
+```
+
+**Sample Request Body**
+```
+{
+  "_id": "beer_vary_hazy",
+  "name": "Vary Hazy",
+  "type": "Imperial IPA",
+  "brewer": "Tree House Brewing Company",
+  "ABV": "8.60",
+  "score": 4.73,
+  "ratings": 671
+}
+```
+**Response 200**
+
+```
+{
+    "ok": true,
+    "id": "beer_vary_hazy",
+    "rev": "2-88f302c43a0bca6c208903af2d21bfe5"
+}
+```
+
+## Delete a beer - `DELETE /beers/{id}`
+
+Deletes a single beer using the beer `{id}` route parameter.
+
+**Example**
+
+```
+DELETE /beers/beer_vary_hazy
+```
+
+**Sample Request Body**
+```
+DELETE /beers/beer_vary_hazy
+```
+**Response 200**
+
+```
+{
+    "ok": true,
+    "id": "beer_vary_hazy",
+    "rev": "3-b02bbd5e2c7e8db54bbdbb048bd000f7"
+}
+```
+
+
+
+## List the beers - `GET /beers`
