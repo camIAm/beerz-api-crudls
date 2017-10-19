@@ -4,8 +4,8 @@ var router = express.Router()
 const bodyParser = require('body-parser')
 router.use(bodyParser.json())
 const checkRequiredFields = require('../lib/check-required-fields')
-const {addBeer, getBeer,updateBeer, deleteBeer} = require('../dal')
-const { not, isEmpty, join, omit,path, merge,keys, prop, __, compose } = require('ramda')
+const {addBeer, getBeer,updateBeer, deleteBeer, listBeers} = require('../dal')
+const { not, isEmpty, pathOr, join, omit,path, merge,keys, prop, __, compose } = require('ramda')
 const HTTPError = require('node-http-error')
 
 router.post('/',(req,res,next)=>{
@@ -75,4 +75,16 @@ router.delete('/:id',(req,res,next)=>{
   .then(doc=>res.status(200).send(doc))
   .catch(err=>next(new HTTPError(prop('status',err),prop('message',err))))
 })
+
+router.get('/',(req, res, next)=>{
+  //console.log("inside listBeers")
+  const filter = pathOr(null,['query','filter'],req)
+  const limit = pathOr(3,['query','limit'],req)
+  const lastItem = pathOr(3,['query','lastItem'],req)
+  //console.log("filter: ", filter,"    limit: ",limit," lastItem: ",lastItem)
+  listBeers(filter,limit,lastItem)
+  .then(list => res.status(200).send(list))
+  .catch(err => next(new HTTPError(err.status,err.message)))
+})
+
 module.exports = router

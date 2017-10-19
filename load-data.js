@@ -47,7 +47,43 @@ const beers = [
     "ABV": "10.25",
     "score": 4.70,
     "ratings": 3400
-  }
+  },
+  {
+    "_id": "beer_fundamental_obervation",
+    "name": "Fundamental Observation",
+    "type": "American IPA",
+    "brewer": "Bottle Logic Brewing",
+    "ABV": "14.30",
+    "score": 4.71,
+    "ratings": 932
+  },
+  {
+    "_id": "beer_double_sunshine_ipa",
+    "name": "Double Sunshine IPA",
+    "type": "American Double",
+    "brewer": "Lawson's Finest Liquids",
+    "ABV": "8.00",
+    "score": 4.67,
+    "ratings": 2140
+  },
+  {
+    "_id": "beer_julius",
+    "name": "Julius",
+    "type": "American IPA",
+    "brewer": "Tree House Brewing Company",
+    "ABV": "11.00",
+    "score": 4.66,
+    "ratings": 3762
+  },
+  {
+    "_id": "beer_pliny_the_elder",
+    "name": "Pliny the Elder",
+    "type": "American Double",
+    "brewer": "Russian River Brewing Company",
+    "ABV": "8.00",
+    "score": 4.65,
+    "ratings": 14560
+  },
 ]
 db.bulkDocs(beers).then(res => console.log("Successfully loaded data!"))
 .catch("An error has occurred will loading data")

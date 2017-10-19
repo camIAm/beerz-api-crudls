@@ -8,7 +8,7 @@
     "testVerbose": "NODE_ENV=test tape test/**/*-test.js",
     "start": "nodemon app.js",
     "load": "node load-data.js",
-    "loadIndex": "node load-indexes.js"
+    "createIndex": "node create-indexes.js"
   },
   "keywords": [],
   "author": "",
@@ -20,7 +20,7 @@
     "express": "^4.15.3",
     "node-http-error": "^1.1.0",
     "pouchdb": "6.2.0",
-    "pouchdb-find": "6.2.0",
+    "pouchdb-find": "^6.2.0",
     "ramda": "^0.24.1"
   },
   "devDependencies": {
