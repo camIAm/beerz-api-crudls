@@ -6,7 +6,7 @@
   "scripts": {
     "test": "NODE_ENV=test tape test/**/*-test.js | faucet",
     "testVerbose": "NODE_ENV=test tape test/**/*-test.js",
-    "start": "node app.js",
+    "start": "nodemon app.js",
     "load": "node load-data.js",
     "loadIndex": "node load-indexes.js"
   },
