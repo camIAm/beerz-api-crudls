@@ -21,6 +21,7 @@ const deleteBeer = id => {
   return deleteDoc(id)
 }
 /*
+<<<<<<< HEAD
 db.find(
   {
     selector: {name: 'Mario'},

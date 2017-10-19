@@ -76,6 +76,7 @@ router.delete('/:id',(req,res,next)=>{
   .catch(err=>next(new HTTPError(prop('status',err),prop('message',err))))
 })
 
+// add sort
 router.get('/',(req, res, next)=>{
   //console.log("inside listBeers")
   const filter = pathOr(null,['query','filter'],req)
