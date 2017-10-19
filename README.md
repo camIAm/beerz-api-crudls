@@ -108,13 +108,14 @@ GET /beers/beer_vary_hazy
 
 ```
 {
-  "_id": "beer_vary_hazy",
-  "name": "Vary Hazy",
-  "type": "Imperial IPA",
-  "brewer": "Tree House Brewing Company",
-  "ABV": "8.60",
-  "score": 4.73,
-  "ratings": 671
+    "_id": "beer_vary_hazy",
+    "_rev": "3-57780a04be5c2b4a4f043b1b3cce8bee",
+    "name": "Vary Hazy",
+    "type": "beer",
+    "brewer": "Tree House Brewing Company",
+    "ABV": "8.60",
+    "score": 4.73,
+    "ratings": 671
 }
 ```
 
@@ -150,7 +151,7 @@ PUT /beers/beer_vary_hazy
 {
     "ok": true,
     "id": "beer_vary_hazy",
-    "rev": "2-88f302c43a0bca6c208903af2d21bfe5"
+    "rev": "4-596c67b89182e36e760bac2ad68421d2"
 }
 ```
 
@@ -174,7 +175,7 @@ DELETE /beers/beer_vary_hazy
 {
     "ok": true,
     "id": "beer_vary_hazy",
-    "rev": "3-b02bbd5e2c7e8db54bbdbb048bd000f7"
+    "rev": "5-626c0ed7a914f5f5f7490752b4dfeb7c"
 }
 ```
 
